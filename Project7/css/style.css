@@ -1,0 +1,502 @@
+:root {
+    --primary-txt-color: rgba(0, 0, 0, 0.6);
+    --orange: #e0501b; 
+    --yellow: #ffce63;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro',sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    /* Collapse To Read About The Overflow Property
+    This helps hide the overflow that is created
+    when the nav card is translated to the far right
+    which expands beyond the view port */
+}
+
+.wrapper {
+    transition: .3s ease-in-out;
+}
+
+.wrapper.blur {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-color: var(--primary-txt-color);
+    transition: .3s ease-in-out;
+    /* Collapse To Read About The -Webkit- Prefix:
+    The "-webkit-" prefix above makes the blur function
+    compatible with google chrome */
+}
+
+/* Navigation Card Design */
+.nav .menu-btn {
+    display: none;
+    margin-left: 2rem;
+}
+
+.nav-card {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    height: 100%;
+    width: 80vw;
+    background: ghostwhite;
+    z-index: -1;
+    padding-top: .5rem;
+    transform: translateX(30rem);
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+.nav-card.display {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+    transition: .4s ease-in-out;
+}
+
+.nav-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5%;
+    font-weight: bold;
+}
+
+
+.nav-card-link {
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+    list-style-type: none;
+    display: grid;
+    row-gap: 1rem;
+}
+
+
+/* Navigation Bar Style */
+/* Collapse To Read About The Position: Fixed
+-The nav bar uses a position of fixed to ensure that it
+is always at a fixed position even during scrolling.
+
+-The property "top: 0", means it is positioned 0 units
+from the top of the view port or in other words, it is 
+always positioned at the top of the screen.*/
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 5;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 10%);
+    border-radius: 0 0 .5rem .5rem;
+    background: white;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.side-nav {
+    display: flex;
+    column-gap:20px;
+    flex-wrap: wrap;
+    font-size: .8rem;
+}
+
+.side-nav-links {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Reusable Classes */
+/*  Collapse To Read About Reusable Classes
+    This reusable class is responsible for 
+    all the orange colored text */
+.orange-accent {
+    color: var(--orange)
+}
+
+
+
+/* Hero Section Style */
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    column-gap: 1rem;
+    row-gap: 5rem;
+    align-items: center;
+    margin: 4rem 2rem 0 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+
+/* Collapse To Read About The Clamp() Function
+The clamp() function below makes fluid 
+typography much easier.
+
+It accepts 3 values:
+
+==> clamp(min, val, max).
+
+_min is the minimum value of font-size
+_val is the preferred value between the min and max boundary
+_max is the maximum value of the font-size*/
+.primary-hero-txt {
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    font-weight: 550;
+}
+
+.hero-txt-accent {
+    font-size: .7em;
+}
+
+.secondary-hero-txt {
+    line-height: 1.9rem;
+    color: var(--primary-txt-color);
+    width: 100%;
+}
+
+.hero-img {
+    width: 28vw;
+    min-width: 20rem;
+}
+
+.button {
+    width: clamp(7rem, 30vw, 10rem);
+    height: 3rem;
+    background-color: #2f8be0;
+    color: white;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+
+/* Stay at Home Section */
+.stay-at-home-container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: max-content 42%;
+    column-gap: 4vw;
+    justify-content: center;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.img-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.img-header {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 600;
+}
+
+.img-header .bottom-txt {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #2f8be0;
+}
+
+.female-doctor {
+    width: 10vw;
+    height: 70vh;
+    min-height: 25rem;
+}
+
+.reasons-container {
+    display: grid;
+    row-gap: 1rem;
+    align-items: center;
+    align-content: end;
+}
+
+.reasons {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 1rem;
+    column-gap: 1rem;
+    border-bottom: 1px solid gainsboro;
+}
+
+.index {
+    font-weight: bold;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.reasons-txt {
+    font-size: .9rem;
+    color: var(--primary-txt-color);
+    line-height: 1.6rem;
+}
+
+
+/* To Do Section Style */
+.to-do-container {
+    margin-top: 3rem;
+    display: grid;
+    justify-items: center;
+    row-gap: 8rem;
+}
+
+.to-do-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-auto-rows: 23rem;
+    justify-content: space-evenly;
+}
+
+.to-do-header {
+    margin: 0 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    font-weight: 600;
+}
+
+
+
+.to-do-cards {
+    display: grid;
+    box-shadow: 0 10px 22px rgb(0 0 0 / 9%), 0 10px 10px rgb(0 0 0 / 9%);
+    position: relative;
+}
+
+.to-do-imgs {
+    width: 60%;
+    position: absolute;
+    right: -20%;
+    top: -70%;
+}
+
+.yellow-bg {
+    background-color: var(--yellow);
+    position: relative;
+}
+
+.blue-bg {
+    background-color: #a1cdff;
+    position: relative;
+}
+
+.cards-txt {
+    margin: 1rem 0 0 1rem;
+    line-height: 1.5rem;
+    color: var(--primary-txt-color);
+}
+
+.cards-txt-header {
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.next {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.5rem;
+    padding: .8rem;
+    background: #ededed;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+
+.next:hover {
+    background: cornflowerblue;
+    transition: .2s ease-in-out;
+}
+
+
+
+/* Mobile App Section Style */
+.mobile-app-section {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    height: max-content;
+    padding: 5rem 1rem;
+    background-color: var(--yellow);
+}
+
+.mobile-app-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.1rem);
+}
+
+.download-app-txt {
+    font-weight: 600;
+}
+
+.update-txt {
+    font-size: .6em;
+}
+
+.download-icon {
+    width: 10vw;
+    min-width: 7rem;
+}
+
+.mobile-app-img {
+    width: 20vw;
+    min-width: 13rem;
+}
+
+
+/* Footer Section Style  */
+.footer {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* Responsive Section */
+/* Nav Bar Responsive */
+@media screen and (max-width: 885px) {
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .side-nav-links {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .nav .menu-btn {
+        display: flex;
+    }
+}
+
+
+/* Hero Section Responsive */
+@media screen and (max-width: 850px) {
+    .hero {
+        justify-content: center;
+    }
+
+    .header, .mobile-app-info {
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 390px) {
+    .hero-img {
+        min-width: initial;
+        width: 80vw;
+    }
+}
+
+/* Stay at Home Responsive */
+@media screen and (max-width: 980px) {
+    .img-container {
+        grid-template-columns: auto;
+        row-gap: 2rem;
+    }
+
+    .img-header {
+        grid-row: 1 / 2;
+    }
+
+    .female-doctor {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .stay-at-home-container {
+        grid-template-columns: 80%;
+        row-gap: 1rem;
+    }
+
+    .female-doctor {
+        display: none;
+    }
+
+}
+
+/* To Do Section Responsive */
+@media screen and (max-width:820px) {
+
+    .to-do-cards-container {
+        justify-content: center;
+        grid-template-columns: repeat(2, 35%);
+        column-gap: 5rem;
+        row-gap: 8rem;
+    } 
+}
+
+@media screen and (max-width: 590px) {
+    .to-do-cards-container {
+        grid-template-columns: 90%;
+    }
+
+    .to-do-imgs {
+        width: 50%;
+        top: -70%;
+        right: 5%;
+    }
+}
+
