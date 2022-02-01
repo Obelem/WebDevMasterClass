@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+
+/* Navigation Bar Style */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    height: 5rem;
+    background: ghostwhite;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.side-nav {
+    display: flex;
+    column-gap:20px;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.side-nav-links {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Reusable Classes */
+.orange-accent {
+    color: #e0501b;
+    /* This reusable class is responsible for 
+    all the orange colored text */
+}
+
+
+
+/* Hero Section Style */
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    column-gap: 1rem;
+    row-gap: 5rem;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.primary-hero-txt {
+    font-size: 5.5vw;
+    font-weight: 550;
+}
+
+.hero-txt-accent {
+    font-size: 3.5vw;
+}
+
+.secondary-hero-txt {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    color: lightgray;
+}
+
+.hero-img {
+    width: 28vw;
+    min-width: 20rem;
+}
+
+.button {
+    width: 30%;
+    min-width: 6rem;
+    height: 3rem;
+    background-color: #2f8be0;
+    color: white;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+
+/* Mobile App Section Style */
+.mobile-app-section {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    height: max-content;
+    padding: 5rem 3rem;
+    background-color: #ffce63;
+    /* border: 1px solid black; */
+}
+
+.mobile-app-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.download-app-txt {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.update-txt {
+    font-size: 1.2rem;
+}
+
+.download-icon {
+    width: 10vw;
+    min-width: 8rem;
+}
+
+.mobile-app-img {
+    width: 20vw;
+    min-width: 15rem;
+}
+
+
+/* Footer Section Style  */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+}
+
+
+/* Responsive Section */
+@media screen and (max-width: 885px) {
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header, .mobile-app-info {
+        align-items: center;
+    }
+
+    .primary-hero-txt {
+        font-size: 8vw;
+    }
+    
+    .hero-txt-accent {
+        font-size: 5vw;
+    }
+    
+}
+
+@media screen and (max-width: 390px) {
+    .hero-img {
+        min-width: initial;
+        width: 80vw;
+    }
+}
+
