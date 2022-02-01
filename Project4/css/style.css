@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Dancing+Script&family=Karma:wght@300&family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.faq-card {
+    margin-top: 5rem;
+    position: relative;
+    width: 20rem;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: .5rem;
+}
+
+.illustration {
+    position: absolute;
+    top: -20.5%;
+    width: 12rem;
+    height: 10rem;
+}
+
+.ill-shadow {
+    position: absolute;
+    width: 12rem;
+    height: 5rem;
+}
+
+.faq-content {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    font-size: 14px;
+    width: 90%;
+    color: hsl(238, 29%, 16%);
+}
+
+h2 {
+    text-align: center;
+}
+
+.accordions {
+    padding: .5rem 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    cursor: pointer;
+}
+
+.accordions:hover > .accordion-btns{
+    color: hsl(14, 88%, 65%);
+}
+
+.accordion-btns.active {
+    font-weight: 700;
+    color: hsl(237, 12%, 33%);
+}
+
+.accordion-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-dropdowns {
+    padding-top: .5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+}
+
+.accordion-dropdowns.active {
+    transition: .2s ease-in-out;
+    max-height: 8rem;
+}
+
+.arrows-down {
+    transition: .2s ease-in-out;
+}
+
+.arrows-down.rotate {
+    transform: rotate(180deg);
+    transition: .2s ease-in-out;
+}
