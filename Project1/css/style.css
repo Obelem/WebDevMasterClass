@@ -1,0 +1,84 @@
+
+/* -This is the Universal Selector; as the name implies,
+it selects all the elements on the page.
+-Therefore, from the code block below, the font-family of 
+all the elements would be what is specified inside it. */
+* {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+/* -This is a class selector, denoted by a dot (.) before the
+text. 
+-All the headers on this page are assigned
+ the class of "headers".
+-This resultantly sets all their colors to sea green
+-Try changing the color or adding any other style in the code 
+block to see how it affects all the headers*/
+.headers {
+    color: seagreen;
+}
+
+.hero-img {
+    width: 500px;
+}
+
+.button {
+    padding: 10px;
+    background-color: peachpuff;
+    border: none;
+    color: black;
+}
+
+/* Notice that this style affects only the button element
+that has both the "button" and the "prev" class because of
+the Multiple Class Selector.
+*/
+.button.prev {
+    background-color: transparent;
+    border: 1px solid crimson;
+    text-decoration: none;
+} 
+
+.prev {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+/* -This uses the Grouping selector which is denoted in css
+with a comma (,).
+-It essentially sets all the elements with the class 
+"programming-langs" and "read-me" to what is specified
+in the code block below */
+.programming-langs, .readme {
+    color: crimson;
+    font-weight: bold;
+}
+
+
+
+/* Here's and Id selector denoted by the hash symbol (#). 
+It can only be assigned to ONE ELEMENT on the page.
+-N/B: Programmers use this sparingly as it may cause terrible
+bugs when the code becomes more complex*/
+#list {
+    color: dimgrey;
+}
+
+
+.light-bulb {
+    background-color: lime;
+    padding: 4px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+/* We get to see an element selector now. 
+-It basically selects all the "a elements on the page". */
+a {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
